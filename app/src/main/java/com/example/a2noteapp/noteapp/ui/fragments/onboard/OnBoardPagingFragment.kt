@@ -34,12 +34,12 @@ class OnBoardPagingFragment : Fragment() {
 
             1 ->{
                 onTxt.text = "Быстрый, качественный продукт"
-                lottieAnimation.setAnimation(R.raw.lottie2)
+                lottieAnimation.setAnimation(R.raw.lottie1)
             }
 
             2 ->{
                 onTxt.text = "Куча функций и интересных фишек"
-                lottieAnimation.setAnimation(R.raw.lottie3)
+                lottieAnimation.setAnimation(R.raw.lottie1)
             }
         }
     }

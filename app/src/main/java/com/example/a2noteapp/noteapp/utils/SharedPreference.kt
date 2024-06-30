@@ -3,6 +3,7 @@ package com.example.a2noteapp.noteapp.utils
 import android.content.Context
 import android.content.SharedPreferences
 
+ Lesson_3
 object SharedPreference {
 
         private lateinit var sharedPreference: SharedPreferences

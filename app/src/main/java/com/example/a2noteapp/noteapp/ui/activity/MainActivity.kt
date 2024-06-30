@@ -1,14 +1,12 @@
 package com.example.a2noteapp.noteapp.ui.activity
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.example.a2noteapp.R
 import com.example.a2noteapp.databinding.ActivityMainBinding
+import com.example.a2noteapp.noteapp.utils.SharedPreference
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,5 +22,12 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager.findFragmentById(R.id.fragment_container) as NavHostFragment
 
         navController = NavHostFragment.navController
+
+        if (SharedPreference.isBoard == true){
+            navController.navigate(R.id.noteFragment)
+        }else{
+            navController.navigate(R.id.onBoardFragment)
+        }
+
     }
 }

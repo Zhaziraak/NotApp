@@ -1,16 +1,16 @@
 package com.example.a2noteapp.noteapp.ui.fragments.onboard
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.example.a2noteapp.R
 import com.example.a2noteapp.databinding.FragmentOnBoardBinding
-import com.example.a2noteapp.databinding.FragmentOnBoardPagingBinding
 import com.example.a2noteapp.noteapp.ui.adapters.OnBoardViewPagerAdapter
+import com.example.a2noteapp.noteapp.utils.SharedPreference
 import com.google.android.material.tabs.TabLayoutMediator
 
 class OnBoardFragment : Fragment() {
@@ -28,29 +28,30 @@ class OnBoardFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initialize()
-        setupListener()
-        TabLayoutMediator(binding.tabLayout, binding.viewpager2) {
-            tab, position ->
+        setupListeners()
+        TabLayoutMediator(binding.tabLayout, binding.viewpager2) { tab, position ->
         }.attach()
+        startWork()
     }
 
 
     private fun initialize() {
         binding.viewpager2.adapter = OnBoardViewPagerAdapter(this@OnBoardFragment)
+        SharedPreference.unit(requireContext())
     }
 
-    private fun setupListener() = with(binding.viewpager2){
-        registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback(){
+    private fun setupListeners() = with(binding.viewpager2) {
+        registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
-                if (position < 3){
-                    binding.txtSkip.setOnClickListener{
+                if (position < 3) {
+                    binding.txtSkip.setOnClickListener {
                         setCurrentItem(currentItem + 2, true)
                     }
                 }
-                binding.txtStart.setOnClickListener{
+                binding.txtStart.setOnClickListener {
                     findNavController().navigate(R.id.noteFragment)
                 }
-                when(position) {
+                when (position) {
                     0 -> {
                         binding.txtSkip.visibility = View.VISIBLE
                         binding.txtStart.visibility = View.INVISIBLE
@@ -72,4 +73,19 @@ class OnBoardFragment : Fragment() {
 
     }
 
+    private fun startWork() {
+        binding.txtStart.setOnClickListener {
+            findNavController().navigate(R.id.action_onBoardFragment_to_noteFragment, null,
+                /*navOptions {
+                    anim {
+                        enter = R.anim.rotate_anim
+                    }
+                }*/)
+        }
+        saveSharPref()
+    }
+
+    private fun saveSharPref() {
+        SharedPreference.isBoard = true
+    }
 }

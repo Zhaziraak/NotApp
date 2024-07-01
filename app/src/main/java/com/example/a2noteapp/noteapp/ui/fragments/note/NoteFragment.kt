@@ -5,8 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
-import com.example.a2noteapp.R
 import com.example.a2noteapp.databinding.FragmentNoteBinding
 import com.example.a2noteapp.noteapp.utils.SharedPreference
 
@@ -31,14 +29,14 @@ class NoteFragment : Fragment() {
         val sharedPreference = SharedPreference
         sharedPreference.unit(requireContext())
 
-        btnSave.setOnClickListener{
+        /*btnSave.setOnClickListener{
             val et = etTitle.text.toString()
             sharedPreference.title = et
             txtSave.text = et
         }
-        txtSave.text = sharedPreference.title
+        txtSave.text = sharedPreference.title*/
 
-        btnAction.setOnClickListener{
+        /*btnAction.setOnClickListener{
             findNavController().navigate(R.id.action_noteFragment_to_noteDetailFragment, null,
                 /*navOptions {
                     anim {
@@ -47,6 +45,6 @@ class NoteFragment : Fragment() {
                     }
                 }*/
             )
-        }
+        }*/
     }
 }

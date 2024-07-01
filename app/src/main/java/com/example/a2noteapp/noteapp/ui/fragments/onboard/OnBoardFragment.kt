@@ -89,3 +89,27 @@ class OnBoardFragment : Fragment() {
         SharedPreference.isBoard = true
     }
 }
+
+
+/* <TextView
+        android:id="@+id/txt_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Save"
+        android:textSize="16sp" />*
+
+         <Button
+        android:id="@+id/btn_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="->"
+        android:textSize="16sp" />/
+ */

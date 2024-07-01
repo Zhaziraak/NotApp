@@ -8,6 +8,7 @@
     <color name="grey_note_back">#131212</color>
     <color name="grey_note">#B1B1B1</color>
     <color name="grey_et">#191818</color>
+    <color name="grey_search">#505050</color>
     <color name="orange_btn_plus">#FFC107</color>
 
 </resources>

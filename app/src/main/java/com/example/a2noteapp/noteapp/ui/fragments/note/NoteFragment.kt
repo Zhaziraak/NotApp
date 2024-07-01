@@ -28,23 +28,5 @@ class NoteFragment : Fragment() {
     private fun setupListeners() = with(binding){
         val sharedPreference = SharedPreference
         sharedPreference.unit(requireContext())
-
-        /*btnSave.setOnClickListener{
-            val et = etTitle.text.toString()
-            sharedPreference.title = et
-            txtSave.text = et
-        }
-        txtSave.text = sharedPreference.title*/
-
-        /*btnAction.setOnClickListener{
-            findNavController().navigate(R.id.action_noteFragment_to_noteDetailFragment, null,
-                /*navOptions {
-                    anim {
-                        enter = R.anim.slide_in_right
-                        exit = R.anim.slide_in_left
-                    }
-                }*/
-            )
-        }*/
     }
 }

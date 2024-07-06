@@ -67,7 +67,6 @@
             android:layout_marginHorizontal="20dp"
             android:layout_width="match_parent"
             android:layout_height="360dp"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/item_note">
 
         </androidx.recyclerview.widget.RecyclerView>
@@ -75,7 +74,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btn_plus"
+        android:id="@+id/btn_add"
         android:layout_width="60dp"
         android:layout_height="60dp"
         app:layout_constraintEnd_toEndOf="parent"

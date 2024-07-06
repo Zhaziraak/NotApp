@@ -1,21 +1,33 @@
 package com.example.a2noteapp.noteapp
 
 import android.app.Application
+import androidx.room.Room
+import com.example.a2noteapp.noteapp.data.db.daos.AppDatabase
 import com.example.a2noteapp.noteapp.utils.SharedPreference
 
- Lesson_3
-class App:Application() {
+class App: Application() {
+
+    companion object{
+    var appDatabase: AppDatabase? = null
+    }
 
     override fun onCreate() {
         super.onCreate()
         val sharedPreference = SharedPreference
-
-class App: Application() {
-
-    override fun onCreate() {
-        super.onCreate()
-        val sharedPreference = SharedPreference()
- master
         sharedPreference.unit(this)
+        getInstance()
+    }
+
+    fun getInstance():AppDatabase? {
+        if (appDatabase == null){
+            appDatabase = applicationContext?.let{
+                Room.databaseBuilder(
+                    it,
+                    AppDatabase::class.java,
+                    "note.database"
+                ).fallbackToDestructiveMigration().allowMainThreadQueries().build()
+            }
+        }
+        return appDatabase
     }
 }

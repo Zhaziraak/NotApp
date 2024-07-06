@@ -5,4 +5,13 @@
     <color name="orange">#D88B02</color>
     <color name="grey">#8E8B8B</color>
     <color name="grey2">#A5A4A1</color>
+    <color name="grey_note_back">#131212</color>
+    <color name="grey_note">#B1B1B1</color>
+    <color name="grey_et">#191818</color>
+    <color name="grey_search">#505050</color>
+    <color name="card_beige">#EBE4C9</color>
+    <color name="card_red">#571818</color>
+    <color name="orange_btn_plus">#FFC107</color>
+
 </resources>
+

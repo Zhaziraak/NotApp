@@ -10,26 +10,10 @@
         android:id="@+id/lottie_animation"
         android:layout_width="300dp"
         android:layout_height="300dp"
- Lesson_3
-        android:layout_gravity="center_horizontal|center_vertical"
-        android:layout_marginTop="80dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="180dp"
         app:cardCornerRadius="20dp">
-
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/lottie_animation"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:layout_gravity="center"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            tools:lottie_rawRes="@raw/lottie1" />
-    </androidx.cardview.widget.CardView>
-
-        android:layout_gravity="center"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/lottie1" />
- master
+    </com.airbnb.lottie.LottieAnimationView>
 
     <TextView
         android:id="@+id/on_txt"
@@ -41,8 +25,5 @@
         android:textSize="16sp"
         android:textStyle="bold"
         tools:ignore="TEXT" />
- Lesson_3
 
-
- master
 </FrameLayout>

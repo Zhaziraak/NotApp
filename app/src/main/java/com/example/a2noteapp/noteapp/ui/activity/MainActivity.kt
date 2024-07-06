@@ -28,6 +28,5 @@ class MainActivity : AppCompatActivity() {
         }else{
             navController.navigate(R.id.onBoardFragment)
         }
-
     }
 }
